@@ -26,3 +26,8 @@ def fizzbuzz(n: int) -> List[str]:
 
 
 print(fizzbuzz(5))
+
+"""
+output:
+['Fizz', '1', '2', 'fizzbuzz', '4', 'Buzz']
+"""
