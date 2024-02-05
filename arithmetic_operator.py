@@ -8,21 +8,10 @@ The third line contains the product of the two numbers.
 
 """
 
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
 
-def arithmetic_operation(a, b):
-    add = a + b
-    sub = a - b
-    product = a * b
-    print(add)
-    print(sub)
-    print(product)
-
-
-arithmetic_operation(3, 5)
-
-"""
-output: 
-8
--2
-15
-"""
+    print(a + b)
+    print(a - b)
+    print(a * b)

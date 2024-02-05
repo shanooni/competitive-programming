@@ -5,7 +5,8 @@ In other words, convert all lowercase letters to uppercase letters and vice vers
 
 
 def swap_case(s: str) -> str:
-    s.swapcase()
+    return s.swapcase()
 
 
-print(swap_case("Www.HackerRank.com"))
+if __name__ == '__main__':
+    print(swap_case("Www.HackerRank.com"))

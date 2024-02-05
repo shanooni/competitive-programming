@@ -15,16 +15,14 @@ Print the square of each number on a separate line.
 def loop_exponent(num: int) -> list[int]:
     answer: list[int] = []
     if num < 0:
-        return -1
+        return
     else:
         for index in range(num):
             answer.append(index ** 2)
     return answer
 
 
-print(loop_exponent(3))
+if __name__ == '__main__':
+    n = int(input())
+    print(loop_exponent(n))
 
-"""
-output:
-[0, 1, 4]
-"""

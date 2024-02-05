@@ -7,18 +7,9 @@ The second line should contain the result of float division,  / .
 No rounding or formatting is necessary.
 """
 
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
 
-def div(a: int, b: int):
-    floor_div = a // b
-    simple_div = a / b
-    print(floor_div)
-    print(simple_div)
-
-
-div(3, 5)
-
-"""
-output: 
-0
-0.6
-"""
+    print(a // b)
+    print(a / b)

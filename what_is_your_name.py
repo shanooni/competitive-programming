@@ -7,14 +7,9 @@ Hello firstname lastname! You just delved into python.
 """
 
 
-def print_full_name(first_name: str, last_name: str):
-    print(f"Hello {first_name} {last_name}! You just delved into python.")
+def print_full_name(firstname, lastname):
+    print(f"Hello {firstname} {lastname}! You just delved into python.")
 
 
-print_full_name("Shanoon", "Issaka")
-
-
-"""
-output
-Hello Shanoon Issaka! You just delved into python.
-"""
+if __name__ == '__main__':
+    print_full_name("Shanoon", "Issaka")

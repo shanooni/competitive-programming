@@ -8,7 +8,7 @@ The first line contains , the second line contains , and the third line contains
 """
 
 
-def mod_pow(a: int, b: int, m: int = None) -> float:
+def mod_pow(a: int, b: int, m: int = None):
     expo = a ** b
     if m is not None:
         expo_mod = expo % m
@@ -18,10 +18,9 @@ def mod_pow(a: int, b: int, m: int = None) -> float:
         print(expo)
 
 
-mod_pow(3, 4, 5)
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    m = int(input())
 
-"""
-output:
-81
-1
-"""
+    mod_pow(a, b, m)
