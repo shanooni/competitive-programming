@@ -9,20 +9,11 @@ The third line contains the product of the two numbers.
 """
 
 
-def arithmetic_operation(a, b):
-    add = a + b
-    sub = a - b
-    product = a * b
-    print(add)
-    print(sub)
-    print(product)
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
 
+    print(a + b)
+    print(a -b)
+    print(a * b)
 
-arithmetic_operation(3, 5)
-
-"""
-output: 
-8
--2
-15
-"""
