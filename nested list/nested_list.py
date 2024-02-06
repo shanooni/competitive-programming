@@ -10,8 +10,7 @@ if __name__ == '__main__':
     sort_score = sorted(set(scores))
     second_lowest_score = sort_score[1]
     sorted_names_by_lowest_score = sorted([name for name, score in zip(names, scores)
-                                           if score == second_lowest_score]
-                                          )
+                                           if score == second_lowest_score])
     print("\n".join(sorted_names_by_lowest_score))
 
 
