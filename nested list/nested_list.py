@@ -13,4 +13,3 @@ if __name__ == '__main__':
                                            if score == second_lowest_score])
     print("\n".join(sorted_names_by_lowest_score))
 
-
