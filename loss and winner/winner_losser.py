@@ -3,19 +3,22 @@ from typing import List
 
 class Solution:
     def findWinner(self, matches: List[List[int]]) -> List[List[int]]:
-        winners_dict = {}
-        lossers_dict = {}
+        lossers = {}
+        winners = set()
         lost_once = []
 
-        for match in matches:
-            winner = match[0]
-            losser = match[1]
-            winners_dict[winner] = winners_dict.get(winner, 0) + 1
-            lossers_dict[losser] = lossers_dict.get(losser, 0) + 1
+        for winner, losser in matches:
+            winners.add(winner)
+            lossers[losser] = lossers.get(losser, 0) + 1
+        print(winners)
+        print(lossers)
+        for losser, score in lossers.items():
+            if score <= 1:
+                lost_once.append(losser)
+            if losser in winners:
+                winners.remove(losser)
+        return [sorted(winners), sorted(lost_once)]
 
-        winner = [win for win in winners_dict.keys() if win not in lossers_dict]
 
-        for lossers, score in lossers_dict.items():
-            if lossers not in winner and score <= 1:
-                lost_once.append(lossers)
-        return [sorted(winner), sorted(lost_once)]
+solution = Solution()
+print(solution.findWinner([[1, 3], [2, 3], [3, 6], [5, 6], [5, 7], [4, 5], [4, 8], [4, 9], [10, 4], [10, 9]]))
